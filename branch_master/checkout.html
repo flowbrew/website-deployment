@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+    <meta name="github-repo" content="flowbrew/website" />
+    <meta name="github-branch" content="master" />
+    <meta name="github-commit-sha" content="8b66bdd684b866708b2f466e7506fbf94332db33" />
+
     <title>Оформление заказа</title>
     <meta name="description" content="Обволакивающий вкус, кремово-ореховое послевкусие и ягодный аромат. Бесплатная доставка по Спб и Москве. Flow Brew" />
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
@@ -1565,7 +1569,7 @@ init_before_dom();
 </form>
 
 <script>
-  product = {"id":"flowbrew60","price":3880,"currency":"RUB","shipping":500,"weight":60,"quantity":0};
+  product = {"currency":"RUB","id":"flowbrew60","price":3880,"quantity":0,"shipping":500,"weight":60};
 
   function read_coupon() {
     var coupon = $('#coupon').val();
