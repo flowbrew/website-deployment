@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="github-repo" content="flowbrew/website" />
     <meta name="github-branch" content="new_discount" />
-    <meta name="github-commit-sha" content="b306739af2f4128ceeaa9c4d35280868e1739300" />
+    <meta name="github-commit-sha" content="401301857a4cc1a97a94d813dc7cedaa06ea2811" />
 
     <title>Что-то сломалось</title>
     <meta name="description" content="" />
@@ -380,7 +380,7 @@ function init_accordion() {
 function we_have_stock(quantity) {
   $(".buy-button").universalClick(function() {
     buy_button_pressed($(this).attr("id"));
-    window.location = "/checkout.html";
+    window.location = "./checkout.html";
   });
 
   var word = quantity == 1 ? "Остался" : "Осталось";
