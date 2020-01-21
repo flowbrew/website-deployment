@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="github-repo" content="" />
     <meta name="github-branch" content="deploy_bug" />
-    <meta name="github-commit-sha" content="35d0df196e7dbce3bcd0072d9eb7d1bf3d3c465d" />
+    <meta name="github-commit-sha" content="7bf6bb09bce241b3d43a2be18c2e6a7b8b3496f1" />
 
     <title>Блог</title>
     <meta name="description" content="" />
@@ -378,7 +378,7 @@ function init_accordion() {
 function we_have_stock(quantity) {
   $(".buy-button").universalClick(function() {
     buy_button_pressed($(this).attr("id"));
-    window.location = "/checkout.html";
+    window.location = "./checkout.html";
   });
 
   var word = quantity == 1 ? "Остался" : "Осталось";
@@ -996,6 +996,8 @@ function process_coupon(coupon_str) {
     return 0.1;
   } else if (coupon === WELCOME_PROMOCODE10.toUpperCase()) {
     return 0.1;
+  } else if (coupon === "flow15".toUpperCase()) {
+    return 0.15;
   }
 
   return 0.0;
