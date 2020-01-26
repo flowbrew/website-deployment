@@ -20,7 +20,7 @@ footer:
     \u0442\u0447\u0430"
   signature: "\xA9 2019, Flow Brew"
 github-branch: add_baseurl_check
-github-commit-sha: 2306d535e785989a7f7f062b0fe2ff1f9f03fa3a
+github-commit-sha: 11f0e2e48568c0e9466eaa868261dc3d07f4c54a
 github-repo: null
 no-index: true
 permalink: /blog/:title
@@ -32,7 +32,7 @@ products:
     id: flowbrew60
     price: 3880
     quantity: 5
-    shipping: 500
+    shipping: 100
     weight: 60
 sass:
   sass_dir: _sass

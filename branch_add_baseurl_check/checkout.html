@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="github-repo" content="" />
     <meta name="github-branch" content="add_baseurl_check" />
-    <meta name="github-commit-sha" content="2306d535e785989a7f7f062b0fe2ff1f9f03fa3a" />
+    <meta name="github-commit-sha" content="11f0e2e48568c0e9466eaa868261dc3d07f4c54a" />
 
     <title>Оформление заказа</title>
     <meta name="description" content="Обволакивающий вкус, кремово-ореховое послевкусие и ягодный аромат. Бесплатная доставка по Спб и Москве. Flow Brew" />
@@ -1564,14 +1564,14 @@ init_before_dom();
 <br />
 
 <div class="checkout-buttons">
-  <a href="/" class="mdc-button">Назад</a>
+  <a href="/branch_add_baseurl_check/" class="mdc-button">Назад</a>
   <button id="buy" class="checkout-buy mdc-button mdc-button--raised"><i class="fa fa-spinner fa-spin"></i> <span class="buy-button-text">Купить</span></button>
 </div>
 
 </form>
 
 <script>
-  product = {"currency":"RUB","id":"flowbrew60","price":3880,"quantity":5,"shipping":500,"weight":60};
+  product = {"currency":"RUB","id":"flowbrew60","price":3880,"quantity":5,"shipping":100,"weight":60};
 
   function read_coupon() {
     var coupon = $('#coupon').val();
@@ -1710,7 +1710,7 @@ init_before_dom();
         crossDomain: true,
         error: function() {
           enablebutton();
-          window.location = '/ошибка';
+          window.location = '/branch_add_baseurl_check/%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0';
         },
         success: function(response) {
           ec_purchase(
@@ -1722,14 +1722,14 @@ init_before_dom();
             state.coupon,
             function () {
               enablebutton();
-              window.location = "/спасибо";
+              window.location = "/branch_add_baseurl_check/%D1%81%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE";
             }
             );
         }
       });
     } catch (e) {
       enablebutton();
-      window.location = '/ошибка';
+      window.location = '/branch_add_baseurl_check/%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0';
     }
   }
 
