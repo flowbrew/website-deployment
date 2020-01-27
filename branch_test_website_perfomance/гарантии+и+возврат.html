@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="github-repo" content="" />
     <meta name="github-branch" content="test_website_perfomance" />
-    <meta name="github-commit-sha" content="7f9029ab8e98d4b99a37c2f6404f7c84086ce8d2" />
+    <meta name="github-commit-sha" content="43007f99e361d03369faa52e8eedb127ef4bf2e2" />
 
     <title>Гарантии и Возврат</title>
     <meta name="description" content="" />
@@ -1101,33 +1101,29 @@ init_before_dom();
 
 // *** //
 
-$(function() {
-  if (typeof mdc === "undefined") {
-    return;
-  }
+$(window).load(function() {
+  $(function() {
+    if (typeof mdc === "undefined") {
+      return;
+    }
 
-  foreach(
-    document.querySelectorAll(".mdc-text-field"),
-    mdc.textField.MDCTextField.attachTo
-  );
+    foreach(
+      document.querySelectorAll(".mdc-text-field"),
+      mdc.textField.MDCTextField.attachTo
+    );
 
-  foreach(
-    document.querySelectorAll(".mdc-button"),
-    mdc.ripple.MDCRipple.attachTo
-  );
-});
+    foreach(
+      document.querySelectorAll(".mdc-button"),
+      mdc.ripple.MDCRipple.attachTo
+    );
+  });
 
-$(function() {
-
-  setTimeout(function() { 
-    
+  $(function() {
     $("<script/>", {
       type: "text/javascript",
       src: "//code.tidio.co/w3dxwgmwf8ybh4xrqxkgetwvwqqd35aj.js"
     }).appendTo("head");
-
-  }, 5000);
-
+  });
 });
 
 //]]> 
