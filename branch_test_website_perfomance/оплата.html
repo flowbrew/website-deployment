@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="github-repo" content="" />
     <meta name="github-branch" content="test_website_perfomance" />
-    <meta name="github-commit-sha" content="ac7cadff8998c8196a1f70e3c85615326fd22897" />
+    <meta name="github-commit-sha" content="5c9a141ccc0611465490e8f8e0b9e81f47439974" />
 
     <title>Оплата</title>
     <meta name="description" content="" />
@@ -1224,7 +1224,7 @@ init_before_dom();
 
 // *** //
 
-$(window).on('load', function(){
+$(window).on("load", function() {
   $(function() {
     if (typeof mdc === "undefined") {
       return;
@@ -1241,12 +1241,8 @@ $(window).on('load', function(){
     );
   });
 
-  $(function() {
-    $("<script defer/>", {
-      type: "text/javascript",
-      src: "//code.tidio.co/w3dxwgmwf8ybh4xrqxkgetwvwqqd35aj.js"
-    }).appendTo("head");
-  });
+  var url = "//code.tidio.co/w3dxwgmwf8ybh4xrqxkgetwvwqqd35aj.js";
+  $("head").append("<scr" + "ipt src='" + url + "'></sc" + "ript>");
 });
 
 //]]> 
