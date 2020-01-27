@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="github-repo" content="" />
     <meta name="github-branch" content="test_website_perfomance" />
-    <meta name="github-commit-sha" content="43007f99e361d03369faa52e8eedb127ef4bf2e2" />
+    <meta name="github-commit-sha" content="5ae27a8df28875bdf0d97d030498009e724ef05c" />
 
     <title>7 причин почему вы подсядете на полезный чай матча</title>
     <meta name="description" content="Никакой антинаучной фигни. Я прочитал 25 научных статей о пользе чая матча на 2019 год и отобрал для вас только вкусные факты." />
@@ -1099,7 +1099,7 @@ init_before_dom();
 
 // *** //
 
-$(window).load(function() {
+$(window).on('load', function(){
   $(function() {
     if (typeof mdc === "undefined") {
       return;
