@@ -20,7 +20,7 @@ footer:
     \u0442\u0447\u0430"
   signature: "\xA9 2019, Flow Brew"
 github-branch: test_website_perfomance
-github-commit-sha: 25474ba44046b2b9d72e0cad89e89af09e55f63d
+github-commit-sha: c4ecbdc91009a21b4f2138486b77cc5b976ba806
 github-repo: null
 no-index: true
 permalink: /blog/:title
