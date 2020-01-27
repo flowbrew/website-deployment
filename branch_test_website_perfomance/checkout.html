@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="github-repo" content="" />
     <meta name="github-branch" content="test_website_perfomance" />
-    <meta name="github-commit-sha" content="2c3ae154fc64d9a6b9a7eda1e8a1b887c2386057" />
+    <meta name="github-commit-sha" content="7f9029ab8e98d4b99a37c2f6404f7c84086ce8d2" />
 
     <title>Оформление заказа</title>
     <meta name="description" content="Обволакивающий вкус, кремово-ореховое послевкусие и ягодный аромат. Бесплатная доставка по Спб и Москве. Flow Brew" />
@@ -1118,10 +1118,16 @@ $(function() {
 });
 
 $(function() {
-  $("<script/>", {
-    type: "text/javascript",
-    src: "//code.tidio.co/w3dxwgmwf8ybh4xrqxkgetwvwqqd35aj.js"
-  }).appendTo("head");
+
+  setTimeout(function() { 
+    
+    $("<script/>", {
+      type: "text/javascript",
+      src: "//code.tidio.co/w3dxwgmwf8ybh4xrqxkgetwvwqqd35aj.js"
+    }).appendTo("head");
+
+  }, 5000);
+
 });
 
 //]]> 
