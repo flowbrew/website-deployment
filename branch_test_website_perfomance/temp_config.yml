@@ -7,6 +7,7 @@ exclude:
 - README.md
 - pybrew
 - .cache
+- node_modules
 footer:
   blog: блог
   contacts: контакты
@@ -17,7 +18,7 @@ footer:
   shop: магазин чая матча
   signature: © 2019, Flow Brew
 github-branch: test_website_perfomance
-github-commit-sha: 668e6923fa82ae36bd7d2c772704cb6e208cece7
+github-commit-sha: 8566ac9d3e7a3fa11ae4b10a4af2506004e2a0fc
 github-repo: null
 no-index: true
 permalink: /blog/:title
@@ -32,7 +33,9 @@ products:
     shipping: 100
     weight: 60
 sass:
-  sass_dir: _sass
+  load_paths:
+  - _sass
+  - node_modules
   style: compressed
 title: Flow Brew
 whitelist:
