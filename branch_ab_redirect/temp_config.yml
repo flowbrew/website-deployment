@@ -1,4 +1,5 @@
 baseurl: branch_ab_redirect/
+branch-prefix: branch_
 email: ak@flowbrew.ru
 exclude:
 - checkout/
@@ -18,7 +19,7 @@ footer:
   shop: магазин чая матча
   signature: © 2019, Flow Brew
 github-branch: ab_redirect
-github-commit-sha: 249c72498cf77700c81fde6262fd51e99a871b6a
+github-commit-sha: d333c35f4cb6e9222e237f37223979bdbc81a1f7
 github-repo: null
 no-index: true
 permalink: /blog/:title
