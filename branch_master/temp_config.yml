@@ -1,4 +1,5 @@
 baseurl: /
+branch-prefix: branch_
 email: ak@flowbrew.ru
 exclude:
 - checkout/
@@ -18,7 +19,7 @@ footer:
   shop: магазин чая матча
   signature: © 2019, Flow Brew
 github-branch: master
-github-commit-sha: 001942ead7e1501e5aca213335e76ef454c1800e
+github-commit-sha: a01843d87611d4e47dde7d79777f4315328ee91a
 github-repo: null
 no-index: false
 permalink: /blog/:title
@@ -38,5 +39,8 @@ sass:
   - node_modules
   style: compressed
 title: Flow Brew
+traffic-allocation:
+  ? ''
+  : 1.0
 whitelist:
 - jekyll-redirect-from
