@@ -1,0 +1,22 @@
+baseurl: branch_speed_up_cicd/
+branch-prefix: branch_
+email: ak@flowbrew.ru
+exclude: [checkout/, watch, bake_images, README.md, pybrew, .cache, node_modules]
+footer: {blog: блог, contacts: контакты, payment: оплата, privacypolicy: политика
+    конфиденциальности, refund: гарантии и возврат, shipment: доставка, shop: магазин
+    чая матча, signature: '© 2019, Flow Brew'}
+github-branch: speed_up_cicd
+github-commit-sha: 667895e3e9ec54b184df7f4bb59e6cbb7f6acd97
+github-repo: null
+no-index: true
+permalink: /blog/:title
+plugins: [jekyll-redirect-from]
+products:
+  matcha: {currency: RUB, id: flowbrew60, price: 3880, quantity: 5, shipping: 100,
+    weight: 60}
+sass:
+  load_paths: [_sass, node_modules]
+  style: compressed
+title: Flow Brew
+traffic-allocation: {}
+whitelist: [jekyll-redirect-from]
