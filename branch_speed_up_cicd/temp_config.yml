@@ -6,7 +6,7 @@ footer: {blog: блог, contacts: контакты, payment: оплата, priv
     конфиденциальности, refund: гарантии и возврат, shipment: доставка, shop: магазин
     чая матча, signature: '© 2019, Flow Brew'}
 github-branch: speed_up_cicd
-github-commit-sha: 88eb6c2b2cbb0d8f39a62fbc275c25f8f695d345
+github-commit-sha: cb27d087ce0ef2802915a5db1e44486b6e16649f
 github-repo: null
 no-index: true
 permalink: /blog/:title
