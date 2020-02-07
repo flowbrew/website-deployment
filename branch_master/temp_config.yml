@@ -1,46 +1,22 @@
 baseurl: /
 branch-prefix: branch_
 email: ak@flowbrew.ru
-exclude:
-- checkout/
-- watch
-- bake_images
-- README.md
-- pybrew
-- .cache
-- node_modules
-footer:
-  blog: блог
-  contacts: контакты
-  payment: оплата
-  privacypolicy: политика конфиденциальности
-  refund: гарантии и возврат
-  shipment: доставка
-  shop: магазин чая матча
-  signature: © 2019, Flow Brew
+exclude: [checkout/, watch, bake_images, README.md, pybrew, .cache, node_modules]
+footer: {blog: блог, contacts: контакты, payment: оплата, privacypolicy: политика
+    конфиденциальности, refund: гарантии и возврат, shipment: доставка, shop: магазин
+    чая матча, signature: '© 2019, Flow Brew'}
 github-branch: master
-github-commit-sha: a78410b8a2ee841a2054f1f08a81716b4ba3a69e
+github-commit-sha: 015687c1797f360fc09842cafcdb2f45cfe83165
 github-repo: null
 no-index: false
 permalink: /blog/:title
-plugins:
-- jekyll-redirect-from
+plugins: [jekyll-redirect-from]
 products:
-  matcha:
-    currency: RUB
-    id: flowbrew60
-    price: 3880
-    quantity: 5
-    shipping: 100
-    weight: 60
+  matcha: {currency: RUB, id: flowbrew60, price: 3880, quantity: 5, shipping: 100,
+    weight: 60}
 sass:
-  load_paths:
-  - _sass
-  - node_modules
+  load_paths: [_sass, node_modules]
   style: compressed
 title: Flow Brew
-traffic-allocation:
-  ? ''
-  : 1.0
-whitelist:
-- jekyll-redirect-from
+traffic-allocation: {? '' : 1.0}
+whitelist: [jekyll-redirect-from]
