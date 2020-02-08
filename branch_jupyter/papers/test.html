@@ -1,0 +1,140 @@
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;../pybrew&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pybrew</span> <span class="kn">import</span> <span class="n">secret_io</span><span class="p">,</span> <span class="n">pipe</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pybrew.analytics</span> <span class="kn">import</span> <span class="n">google_analytics_io</span><span class="p">,</span> <span class="n">google_analytics_view_id</span><span class="p">,</span> <span class="n">to_dataframe</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">analytics</span> <span class="o">=</span> <span class="n">google_analytics_io</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;Something went wrong&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">-------------------------------------------------------</span>
+<span class="ansi-red-fg">AssertionError</span>        Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-034a4b2c4625&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">assert</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Something went wrong&#34;</span>
+
+<span class="ansi-red-fg">AssertionError</span>: Something went wrong</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_report</span><span class="p">(</span><span class="n">analytics</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">analytics</span><span class="o">.</span><span class="n">reports</span><span class="p">()</span><span class="o">.</span><span class="n">batchGet</span><span class="p">(</span>
+      <span class="n">body</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;reportRequests&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s1">&#39;viewId&#39;</span><span class="p">:</span> <span class="n">google_analytics_view_id</span><span class="p">(),</span>
+          <span class="s1">&#39;dateRanges&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;startDate&#39;</span><span class="p">:</span> <span class="s1">&#39;7daysAgo&#39;</span><span class="p">,</span> <span class="s1">&#39;endDate&#39;</span><span class="p">:</span> <span class="s1">&#39;today&#39;</span><span class="p">}],</span>
+          <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;expression&#39;</span><span class="p">:</span> <span class="s1">&#39;ga:sessions&#39;</span><span class="p">}],</span>
+          <span class="s1">&#39;dimensions&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;ga:country&#39;</span><span class="p">}]</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+
+                           
+<span class="n">countries</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span>
+    <span class="n">analytics</span><span class="p">,</span>
+    <span class="n">get_report</span><span class="p">,</span>
+    <span class="n">to_dataframe</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tcountries</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s1">&#39;ga:sessions&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">})</span>
+<span class="n">tcountries</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;ga:country&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;ga:sessions&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;lol&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
