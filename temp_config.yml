@@ -41,6 +41,7 @@ sass:
 title: Flow Brew
 traffic-allocation:
   ? ''
-  : 1.0
+  : 0.5
+  jupyter: 0.5
 whitelist:
 - jekyll-redirect-from
