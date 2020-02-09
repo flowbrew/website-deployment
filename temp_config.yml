@@ -19,7 +19,7 @@ footer:
   shop: магазин чая матча
   signature: © 2019, Flow Brew
 github-branch: master
-github-commit-sha: a11b74699fcb31314cb5fe7a75c20181771e4706
+github-commit-sha: 6f669675447999d94e45db8d39ee1007be5ae904
 github-repo: null
 no-index: false
 permalink: /blog/:title
@@ -28,9 +28,10 @@ plugins:
 products:
   matcha:
     currency: RUB
+    fast_shiping: 1100
     id: flowbrew60
     price: 3880
-    quantity: 5
+    quantity: 4
     shipping: 100
     weight: 60
 sass:

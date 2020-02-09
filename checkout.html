@@ -9,7 +9,7 @@
     
     <meta name="github-repo" content="" />
     <meta name="github-branch" content="master" />
-    <meta name="github-commit-sha" content="a11b74699fcb31314cb5fe7a75c20181771e4706" />
+    <meta name="github-commit-sha" content="6f669675447999d94e45db8d39ee1007be5ae904" />
 
     <title>Оформление заказа</title>
     <meta name="description" content="Обволакивающий вкус, кремово-ореховое послевкусие и ягодный аромат. Бесплатная доставка по Спб и Москве. Flow Brew" />
@@ -65,7 +65,7 @@
 
       Split.split_test_io(
         "/",
-        "a11b74699fcb31314cb5fe7a75c20181771e4706",
+        "6f669675447999d94e45db8d39ee1007be5ae904",
         
           {"":1.0}
         
@@ -1809,7 +1809,7 @@ n.d(e,"int_to_days",(function(){return l})),n.d(e,"int_to_hours",(function(){ret
 </form>
 
 <script>
-  product = {"currency":"RUB","id":"flowbrew60","price":3880,"quantity":5,"shipping":100,"weight":60};
+  product = {"currency":"RUB","fast_shiping":1100,"id":"flowbrew60","price":3880,"quantity":4,"shipping":100,"weight":60};
 
   function read_coupon() {
     var coupon = $('#coupon').val();
@@ -1838,7 +1838,7 @@ n.d(e,"int_to_days",(function(){return l})),n.d(e,"int_to_hours",(function(){ret
       $(".msk-time-panel").show();
     } else if (city == "Москва (экспресс)") {
       $(".msk-express-time-panel").show();
-      shipping = product.shipping;
+      shipping = product.fast_shiping;
     } else if (city == "Московская область") {
       $(".msk-obl-time-panel").show();
       shipping = product.shipping;
