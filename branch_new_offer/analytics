@@ -1,0 +1,36 @@
+#!/bin/bash
+
+BUILDPARAMS=""
+RUNPARAMS=""
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+DOCKERNAME="flowbrewlocal:${BRANCH_NAME}"
+
+if docker build ${BUILDPARAMS} -t "$DOCKERNAME" .
+then
+    echo docker built sucessfully
+else
+    echo ERROR: cant build docker
+    exit 1
+fi
+
+DOCKER_COMMAND=$(cat <<-EOF
+    cd /local_website
+    git config --global user.email "action@flowbrew.ru"
+    git config --global user.name "GitHub Analytics"
+    pip install -e ./pybrew
+    jupyter lab \
+        --no-browser \
+        --ip=0.0.0.0 \
+        --allow-root \
+        --notebook-dir=/local_website \
+        --config=/local_website/JupyterApp.config.py
+EOF
+)
+
+docker rm -f analytics
+docker run -t --rm --name analytics \
+    ${RUNPARAMS} \
+    -v "$PWD":/local_website \
+    -e GOOGLE_ANALYTICS \
+    -p 127.0.0.1:8888:8888 \
+    "$DOCKERNAME" bash -c "$DOCKER_COMMAND"

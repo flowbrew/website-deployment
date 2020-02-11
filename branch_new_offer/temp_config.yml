@@ -1,0 +1,45 @@
+baseurl: branch_new_offer/
+branch-prefix: branch_
+email: ak@flowbrew.ru
+exclude:
+- checkout/
+- watch
+- bake_images
+- README.md
+- pybrew
+- .cache
+- node_modules
+footer:
+  blog: блог
+  contacts: контакты
+  payment: оплата
+  privacypolicy: политика конфиденциальности
+  refund: гарантии и возврат
+  shipment: доставка
+  shop: магазин чая матча
+  signature: © 2019, Flow Brew
+github-branch: new_offer
+github-commit-sha: ee48bfbb21ffb1bccc6a9ca41ff8d20106dfa2fa
+github-repo: null
+no-index: true
+permalink: /blog/:title
+plugins:
+- jekyll-redirect-from
+products:
+  matcha:
+    currency: RUB
+    fast_shiping: 1100
+    id: flowbrew60
+    price: 3080
+    quantity: 4
+    shipping: 100
+    weight: 60
+sass:
+  load_paths:
+  - _sass
+  - node_modules
+  style: compressed
+title: Flow Brew
+traffic-allocation: {}
+whitelist:
+- jekyll-redirect-from
