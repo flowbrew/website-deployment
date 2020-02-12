@@ -19,7 +19,7 @@ footer:
   shop: магазин чая матча
   signature: © 2019, Flow Brew
 github-branch: new_offer
-github-commit-sha: ee48bfbb21ffb1bccc6a9ca41ff8d20106dfa2fa
+github-commit-sha: 558ca9238531b140bebea4531cb97d68227d4ef9
 github-repo: null
 no-index: true
 permalink: /blog/:title
