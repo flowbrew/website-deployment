@@ -42,7 +42,6 @@ sass:
 title: Flow Brew
 traffic-allocation:
   ? ''
-  : 0.5
-  branch_new_offer: 0.5
+  : 1.0
 whitelist:
 - jekyll-redirect-from
